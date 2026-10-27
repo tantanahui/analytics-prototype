@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>埋点事件分析平台 · 原型</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <!-- 侧边栏 -->
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="logo-mark">埋</div>
+      <div>
+        <div class="logo-text">Insight Analytics</div>
+        <div class="logo-sub">埋点 & 投放分析平台</div>
+      </div>
+    </div>
+    <div class="nav" id="nav"></div>
+    <div class="sidebar-footer">
+      <span class="dot"></span> 数据接入正常 · 延迟 &lt; 3min
+    </div>
+  </aside>
+
+  <!-- 主区域 -->
+  <div class="main">
+    <header class="topbar">
+      <div class="crumb" id="crumb"></div>
+      <div class="topbar-right" id="topfilters"></div>
+    </header>
+    <div class="content">
+      <div id="view"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 事件 / 对象详情抽屉 -->
+<div class="mask" id="mask"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <span style="font-size:14px;font-weight:600" id="drawerTitle">详情</span>
+    <span class="close" id="drawerClose">✕</span>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</div>
+
+<!-- 通用弹窗 -->
+<div class="modal-mask" id="modalMask">
+  <div class="modal">
+    <div class="modal-head"><span id="modalTitle">操作</span><span class="close" id="modalCancel">✕</span></div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-foot">
+      <button class="btn" id="modalCancel2">取消</button>
+      <button class="btn primary" id="modalOk">确定</button>
+    </div>
+  </div>
+</div>
+
+<div class="prototype-banner">原型 Demo · 数据为模拟数据</div>
+
+<script src="charts.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="views.js"></script>
+<script src="profile.js"></script>
+<script src="recall.js"></script>
+<script src="detail.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>
